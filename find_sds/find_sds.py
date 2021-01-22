@@ -197,6 +197,7 @@ def download_sds(cas_nr: str, download_path: str) -> Tuple[str, bool, Optional[s
 def extract_download_url_from_chemblink(cas_nr: str) -> Optional[Tuple[str, str]]:
     """Search for url to download SDS for chemical with cas_nr
     from https://www.chemblink.com/
+    没有中文版
 
     Parameters
     ----------
@@ -259,6 +260,8 @@ def extract_download_url_from_chemblink(cas_nr: str) -> Optional[Tuple[str, str]
 def extract_download_url_from_vwr(cas_nr: str) -> Optional[Tuple[str, str]]:
     """Search for url to download SDS for chemical with cas_nr
     from https://us.vwr.com/store/search/searchMSDS.jsp
+    中文版 https://cn.vwr.com/store/search/searchMSDS.jsp
+    但是抓取出来的pdf不一定是中文版
 
     Parameters
     ----------
@@ -337,6 +340,8 @@ def extract_download_url_from_vwr(cas_nr: str) -> Optional[Tuple[str, str]]:
 def extract_download_url_from_fisher(cas_nr: str) -> Optional[Tuple[str, str]]:
     """Search for url to download SDS for chemical with cas_nr
     from https://www.fishersci.com
+    理论上中文网站是 www.fishersci.com.cn
+    但是访问不了.....
 
     Parameters
     ----------
@@ -400,6 +405,7 @@ def extract_download_url_from_fisher(cas_nr: str) -> Optional[Tuple[str, str]]:
 def extract_download_url_from_chemicalsafety(cas_nr: str) -> Optional[Tuple[str, str]]:
     """Search for url to download SDS for chemical with cas_nr
     from https://chemicalsafety.com/sds-search/
+    没有中文版....啊.....
 
     Parameters
     ----------
@@ -539,6 +545,7 @@ def extract_download_url_from_fluorochem(cas_nr: str) -> Optional[Tuple[str, str
 
 def extract_download_url_from_tci(cas_nr: str) -> Optional[Tuple[str, str]]:
     """Search for url of SDS from TCI Chemicals (www.tcichemicals.com)
+    中文版 https://www.tcichemicals.com/CN/zh/search/?text={}&resulttype=product
 
     Parameters
     ----------
